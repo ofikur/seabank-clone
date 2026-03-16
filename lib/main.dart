@@ -76,7 +76,6 @@ class _HomePageState extends State<HomePage> {
       shape: const CircularNotchedRectangle(),
       notchMargin: 4.0,
       child: Container(
-        height: 60,
         padding: const EdgeInsets.only(top: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    'QIRIS',
+                    'QRIS',
                     style: TextStyle(fontSize: 10, color: Colors.grey),
                   ),
                   SizedBox(height: 4),
@@ -125,6 +124,7 @@ class _HomePageState extends State<HomePage> {
         Text(
           label,
           style: TextStyle(
+            fontSize: 10,
             fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
             color: isActive ? const Color(0xFFE95E1A) : Colors.grey,
           ),
