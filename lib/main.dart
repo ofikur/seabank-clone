@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildBottomNavigationBar() {
     return Container(
-      height: 85,
+      height: 65,
       decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -76,28 +76,33 @@ class _HomePageState extends State<HomePage> {
             child: _buildNavItem(Icons.swap_horiz, 'Bayar/Transfer', false),
           ),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+            child: Stack(
+              clipBehavior: Clip.none,
+              alignment: Alignment.bottomCenter,
               children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFE95E1A),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.qr_code_scanner,
-                    color: Colors.white,
-                    size: 26,
+                const Positioned(
+                  bottom: 8,
+                  child: Text(
+                    'QRIS',
+                    style: TextStyle(fontSize: 10, color: Colors.grey),
                   ),
                 ),
-                SizedBox(height: 4),
-                Text(
-                  'QRIS',
-                  style: TextStyle(fontSize: 10, color: Colors.grey),
+                Positioned(
+                  bottom: 26,
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFE95E1A),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.qr_code_scanner,
+                      color: Colors.white,
+                      size: 26,
+                    ),
+                  ),
                 ),
-                SizedBox(height: 4),
               ],
             ),
           ),
