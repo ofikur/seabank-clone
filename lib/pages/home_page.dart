@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import '../components/custom_button_nav.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: ListView(
+          children: const [
+            SizedBox(height: 300),
+            Center(
+              child: Text(
+                "Kerangka Halaman Utama",
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ),
+
+      bottomNavigationBar: const CustomButtonNav(),
+
+      floatingActionButton: SizedBox(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
+  }
+}
