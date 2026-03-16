@@ -49,11 +49,22 @@ class _HomePageState extends State<HomePage> {
 
       bottomNavigationBar: _buildBottomNavigationBar(),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: const Color(0xFFE95E1A),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        child: const Icon(Icons.qr_code_scanner, color: Colors.white, size: 30),
+      floatingActionButton: SizedBox(
+        height: 50,
+        width: 50,
+        child: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: const Color(0xFFE95E1A),
+          elevation: 2,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
+          child: const Icon(
+            Icons.qr_code_scanner,
+            color: Colors.white,
+            size: 26,
+          ),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
@@ -63,9 +74,10 @@ class _HomePageState extends State<HomePage> {
     return BottomAppBar(
       color: Colors.white,
       shape: const CircularNotchedRectangle(),
-      notchMargin: 8.0,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4.0),
+      notchMargin: 4.0,
+      child: Container(
+        height: 60,
+        padding: const EdgeInsets.only(top: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -73,7 +85,18 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: _buildNavItem(Icons.swap_horiz, 'Bayar/Transfer', false),
             ),
-            const SizedBox(width: 40),
+            const Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'QIRIS',
+                    style: TextStyle(fontSize: 10, color: Colors.grey),
+                  ),
+                  SizedBox(height: 4),
+                ],
+              ),
+            ),
             Expanded(
               child: _buildNavItem(
                 Icons.monetization_on_outlined,
@@ -91,13 +114,14 @@ class _HomePageState extends State<HomePage> {
   Widget _buildNavItem(IconData icon, String label, bool isActive) {
     return Column(
       mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Icon(
           icon,
           color: isActive ? const Color(0xFFE95E1A) : Colors.grey,
           size: 28,
         ),
+        const SizedBox(height: 4),
         Text(
           label,
           style: TextStyle(
@@ -105,6 +129,7 @@ class _HomePageState extends State<HomePage> {
             color: isActive ? const Color(0xFFE95E1A) : Colors.grey,
           ),
         ),
+        const SizedBox(height: 4),
       ],
     );
   }
