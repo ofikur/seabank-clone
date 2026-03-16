@@ -56,14 +56,14 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildBottomNavigationBar() {
     return Container(
-      height: 65,
-      decoration: const BoxDecoration(
+      height: 55,
+      decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black12,
-            blurRadius: 4,
-            offset: Offset(0, -2),
+            color: Colors.black.withOpacity(0.04),
+            blurRadius: 2,
+            offset: const Offset(0, -1),
           ),
         ],
       ),
@@ -81,17 +81,17 @@ class _HomePageState extends State<HomePage> {
               alignment: Alignment.bottomCenter,
               children: [
                 const Positioned(
-                  bottom: 8,
+                  bottom: 6,
                   child: Text(
                     'QRIS',
                     style: TextStyle(fontSize: 10, color: Colors.grey),
                   ),
                 ),
                 Positioned(
-                  bottom: 26,
+                  bottom: 22,
                   child: Container(
-                    height: 50,
-                    width: 50,
+                    height: 45,
+                    width: 45,
                     decoration: const BoxDecoration(
                       color: Color(0xFFE95E1A),
                       shape: BoxShape.circle,
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
           color: isActive ? const Color(0xFFE95E1A) : Colors.grey,
           size: 28,
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: 0),
         Text(
           label,
           style: TextStyle(
