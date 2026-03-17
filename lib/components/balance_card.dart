@@ -8,7 +8,6 @@ class BalanceCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
-        padding: const EdgeInsets.all(16.0),
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [Color(0xFFFF7A00), Color(0xFFFF5E00)],
@@ -20,37 +19,46 @@ class BalanceCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Row(
-                  children: [
-                    Text(
-                      'Total Saldo',
-                      style: TextStyle(color: Colors.white, fontSize: 14),
-                    ),
-                    SizedBox(width: 4),
-                    Icon(
-                      Icons.visibility_outlined,
-                      color: Colors.white,
-                      size: 16,
-                    ),
-                  ],
+                const Padding(
+                  padding: EdgeInsets.only(left: 16.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Total Saldo',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                      SizedBox(width: 8),
+                      Icon(
+                        Icons.visibility_outlined,
+                        color: Colors.white,
+                        size: 18,
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 4,
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    right: 6,
+                    top: 4,
+                    bottom: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.black.withOpacity(0.15),
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                    ),
                   ),
                   child: const Row(
                     children: [
                       Text(
                         'Riwayat',
-                        style: TextStyle(color: Colors.white, fontSize: 12),
+                        style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
                       Icon(Icons.chevron_right, color: Colors.white, size: 16),
                     ],
@@ -59,125 +67,147 @@ class BalanceCard extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 8),
+            const SizedBox(height: 2),
 
-            const Text(
-              'Rp 534.287.200',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
+              child: Text(
+                'Rp 534.287.200',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
 
-            const SizedBox(height: 24),
+            Divider(
+              color: Colors.white.withOpacity(0.2),
+              height: 30,
+              thickness: 0.5,
+            ),
 
-            Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Row(
-                        children: [
-                          Text(
-                            'Tabungan',
-                            style: TextStyle(color: Colors.white, fontSize: 12),
-                          ),
-                          Icon(
-                            Icons.chevron_right,
-                            color: Colors.white,
-                            size: 14,
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-
-                      const Text(
-                        'Rp 1',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        '2,5% p.a cair harian',
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.8),
-                          fontSize: 10,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Row(
-                        children: [
-                          Text(
-                            'Deposito',
-                            style: TextStyle(color: Colors.white, fontSize: 12),
-                          ),
-                          Icon(
-                            Icons.chevron_right,
-                            color: Colors.white,
-                            size: 14,
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                      FittedBox(
-                        fit: BoxFit.scaleDown,
-                        alignment: Alignment.centerLeft,
-                        child: Row(
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 16.0,
+                right: 16.0,
+                bottom: 16.0,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
                           children: [
                             const Text(
-                              'Rp 200.000.000',
+                              'Tabungan',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
+                              ),
+                            ),
+                            const SizedBox(width: 2),
+                            Icon(
+                              Icons.chevron_right,
+                              color: Colors.white.withOpacity(0.8),
+                              size: 16,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        const Text(
+                          'Rp 13.357.180',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          '2,5% p.a cair harian',
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.8),
+                            fontSize: 13,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            const Text(
+                              'Deposito',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              ),
+                            ),
+                            const SizedBox(width: 2),
+                            Icon(
+                              Icons.chevron_right,
+                              color: Colors.white.withOpacity(0.8),
+                              size: 16,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Wrap(
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          spacing: 6,
+                          runSpacing: 4,
+                          children: [
+                            const Text(
+                              'Rp 0',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            const SizedBox(width: 8),
                             Container(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 6,
                                 vertical: 2,
                               ),
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: Color.fromARGB(255, 255, 222, 73),
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: const Text(
                                 'Buka Deposito',
                                 style: TextStyle(
-                                  color: Color(0xFFFF7A00),
-                                  fontSize: 9,
+                                  color: Color.fromARGB(255, 54, 36, 27),
+                                  fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
                           ],
                         ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        'Hingga 6% p.a.',
-                        style: TextStyle(
-                          color: Colors.white.withOpacity(0.8),
-                          fontSize: 10,
+                        const SizedBox(height: 4),
+                        Text(
+                          'Hingga 6% p.a.',
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.8),
+                            fontSize: 13,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
