@@ -43,7 +43,7 @@ class CustomButtonNav extends StatelessWidget {
                     height: 45,
                     width: 45,
                     decoration: const BoxDecoration(
-                      color: Color(0xFFE95E1A),
+                      color: Color.fromARGB(255, 233, 94, 26),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
@@ -76,7 +76,9 @@ class CustomButtonNav extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: isActive ? const Color(0xFFE95E1A) : Colors.grey,
+          color: isActive
+              ? const Color.fromARGB(255, 233, 94, 26)
+              : Colors.grey,
           size: 28,
         ),
         const SizedBox(height: 0),
@@ -85,7 +87,9 @@ class CustomButtonNav extends StatelessWidget {
           style: TextStyle(
             fontSize: 10,
             fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
-            color: isActive ? const Color(0xFFE95E1A) : Colors.grey,
+            color: isActive
+                ? const Color.fromARGB(255, 233, 94, 26)
+                : Colors.grey,
           ),
         ),
         const SizedBox(height: 4),

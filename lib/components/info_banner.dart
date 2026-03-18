@@ -15,7 +15,7 @@ class InfoBanner extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         decoration: BoxDecoration(
-          color: const Color(0xFFFFFFF0),
+          color: const Color.fromARGB(255, 255, 255, 240),
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(color: Colors.grey.shade200),
         ),

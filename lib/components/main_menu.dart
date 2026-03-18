@@ -91,7 +91,7 @@ class MainMenu extends StatelessWidget {
         Stack(
           clipBehavior: Clip.none,
           children: [
-            Icon(icon, color: const Color(0xFFFF5E00), size: 28),
+            Icon(icon, color: const Color.fromARGB(255, 255, 94, 0), size: 28),
 
             if (badge != null)
               Positioned(

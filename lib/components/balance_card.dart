@@ -10,7 +10,10 @@ class BalanceCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFFFF7A00), Color(0xFFFF5E00)],
+            colors: [
+              Color.fromARGB(255, 255, 123, 0),
+              Color.fromARGB(255, 255, 94, 0),
+            ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
