@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: const [
             ProfileHeader(),
-            SizedBox(height: 8),
+            SizedBox(height: 2),
             BalanceCard(),
             SizedBox(height: 300),
             Center(

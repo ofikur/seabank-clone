@@ -14,7 +14,7 @@ class BalanceCard extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(16.0),
+          borderRadius: BorderRadius.circular(10.0),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -181,13 +181,13 @@ class BalanceCard extends StatelessWidget {
                                 vertical: 2,
                               ),
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 255, 222, 73),
+                                color: Color.fromARGB(255, 255, 216, 108),
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: const Text(
                                 'Buka Deposito',
                                 style: TextStyle(
-                                  color: Color.fromARGB(255, 54, 36, 27),
+                                  color: Color.fromARGB(255, 71, 52, 42),
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
                                 ),
