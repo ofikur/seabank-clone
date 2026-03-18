@@ -10,7 +10,7 @@ class MainMenu extends StatelessWidget {
         left: 16.0,
         right: 16.0,
         top: 12.0,
-        bottom: 24.0,
+        bottom: 8.0,
       ),
       child: Container(
         padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
