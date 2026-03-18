@@ -4,6 +4,7 @@ import '../components/profile_header.dart';
 import '../components/balance_card.dart';
 import '../components/main_menu.dart';
 import '../components/info_banner.dart';
+import '../components/promo_banner.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomePage> {
             BalanceCard(),
             MainMenu(),
             InfoBanner(),
+            PromoBanner(),
             SizedBox(height: 300),
             Center(
               child: Text(
