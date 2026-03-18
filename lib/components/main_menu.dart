@@ -6,7 +6,12 @@ class MainMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
+      padding: const EdgeInsets.only(
+        left: 16.0,
+        right: 16.0,
+        top: 12.0,
+        bottom: 24.0,
+      ),
       child: Container(
         padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
         decoration: BoxDecoration(
@@ -86,7 +91,7 @@ class MainMenu extends StatelessWidget {
         Stack(
           clipBehavior: Clip.none,
           children: [
-            Icon(icon, color: const Color(0xFFFF5E00), size: 32),
+            Icon(icon, color: const Color(0xFFFF5E00), size: 28),
 
             if (badge != null)
               Positioned(
@@ -113,7 +118,7 @@ class MainMenu extends StatelessWidget {
               ),
           ],
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 6),
         Text(
           title,
           textAlign: TextAlign.center,
