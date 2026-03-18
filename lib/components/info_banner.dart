@@ -13,7 +13,7 @@ class InfoBanner extends StatelessWidget {
         bottom: 16.0,
       ),
       child: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         decoration: BoxDecoration(
           color: const Color(0xFFFFFFF0),
           borderRadius: BorderRadius.circular(10.0),
@@ -48,7 +48,7 @@ class InfoBanner extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: 3),
 
             Align(
               alignment: Alignment.centerRight,
