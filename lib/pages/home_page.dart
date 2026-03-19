@@ -22,19 +22,26 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(
-          children: const [
-            ProfileHeader(),
-            SizedBox(height: 2),
-            BalanceCard(),
-            MainMenu(),
-            InfoBanner(),
-            PromoBanner(),
-            FlashDeals(),
-            ConnectedEwallet(),
-            TransactionHistory(),
-            RecentTranfers(),
-            SizedBox(height: 14),
+        child: Column(
+          children: [
+            const ProfileHeader(),
+            const SizedBox(height: 2),
+
+            Expanded(
+              child: ListView(
+                children: const [
+                  BalanceCard(),
+                  MainMenu(),
+                  InfoBanner(),
+                  PromoBanner(),
+                  FlashDeals(),
+                  ConnectedEwallet(),
+                  TransactionHistory(),
+                  RecentTranfers(),
+                  SizedBox(height: 14),
+                ],
+              ),
+            ),
           ],
         ),
       ),
