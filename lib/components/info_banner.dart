@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class InfoBanner extends StatelessWidget {
+class InfoBanner extends StatefulWidget {
   const InfoBanner({super.key});
+
+  @override
+  State<InfoBanner> createState() => _InfoBannerState();
+}
+
+class _InfoBannerState extends State<InfoBanner> {
+  bool _isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +47,9 @@ class InfoBanner extends StatelessWidget {
             const SizedBox(height: 2),
 
             Text(
-              'Nasabah yang terhormat, sehubungan dengan Hari Raya Nyepi 2026 layanan transaksi SKN dan RTGS tidak akan...',
+              _isExpanded
+                  ? 'Nasabah yang terhormat, sehubungan dengan Hari Raya Nyepi 2026 layanan transaksi SKN dan RTGS tidak akan tersedia pada tanggal 18-19 Maret 2026'
+                  : 'Nasabah yang terhormat, sehubungan dengan Hari Raya Nyepi 2026 layanan transaksi SKN dan RTGS tidak akan...',
               style: TextStyle(
                 fontSize: 15,
                 color: Colors.grey.shade700,
@@ -52,12 +61,19 @@ class InfoBanner extends StatelessWidget {
 
             Align(
               alignment: Alignment.centerRight,
-              child: Text(
-                'Lihat Selengkapnya',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.blue.shade600,
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    _isExpanded = !_isExpanded;
+                  });
+                },
+                child: Text(
+                  'Lihat Selengkapnya',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.blue.shade600,
+                  ),
                 ),
               ),
             ),
