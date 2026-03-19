@@ -61,7 +61,6 @@ class FlashDeals extends StatelessWidget {
 
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              physics: const NeverScrollableScrollPhysics(),
               clipBehavior: Clip.none,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,

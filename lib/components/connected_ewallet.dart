@@ -39,6 +39,7 @@ class ConnectedEwallet extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
+                physics: const NeverScrollableScrollPhysics(),
                 clipBehavior: Clip.none,
                 child: Row(
                   children: [
