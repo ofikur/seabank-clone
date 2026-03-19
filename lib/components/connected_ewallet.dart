@@ -91,10 +91,10 @@ class ConnectedEwallet extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               iconText,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
-                fontSize: 14,
+                fontSize: iconText.length == 1 ? 20 : 14,
               ),
             ),
           ),
