@@ -34,13 +34,7 @@ class _HomePageState extends State<HomePage> {
             ConnectedEwallet(),
             TransactionHistory(),
             RecentTranfers(),
-            SizedBox(height: 300),
-            Center(
-              child: Text(
-                "Kerangka Halaman Utama",
-                textAlign: TextAlign.center,
-              ),
-            ),
+            SizedBox(height: 14),
           ],
         ),
       ),
