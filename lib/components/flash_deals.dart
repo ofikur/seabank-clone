@@ -6,7 +6,7 @@ class FlashDeals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 6.0),
       child: Container(
         clipBehavior: Clip.hardEdge,
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
@@ -106,7 +106,7 @@ class FlashDeals extends StatelessWidget {
                   const SizedBox(width: 12),
 
                   _buildDealCard('12 bulan', '7.5', '6% p.a.', '100 kuota'),
-                  const SizedBox(width: 12),
+                  const SizedBox(width: 10),
                   _buildDealCard(
                     '6 bulan',
                     '6,25',
