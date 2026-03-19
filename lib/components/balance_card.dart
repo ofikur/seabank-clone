@@ -123,7 +123,7 @@ class BalanceCard extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         const Text(
-                          'Rp 13.357.180',
+                          'Rp 534.287.200',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
