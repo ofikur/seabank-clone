@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
+import 'pages/loading_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
         scaffoldBackgroundColor: const Color(0xFFF8F9FA),
       ),
-      home: const HomePage(),
+      home: const LoadingPage(),
     );
   }
 }
