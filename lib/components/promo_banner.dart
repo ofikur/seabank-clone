@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class PromoBanner extends StatelessWidget {
   final double height;
+  final String imagePath;
 
   const PromoBanner({
     super.key,
     this.height = 80,
+    required this.imagePath,
   });
 
   @override
@@ -17,17 +19,10 @@ class PromoBanner extends StatelessWidget {
         child: Container(
           height: height,
           width: double.infinity,
-          decoration: const BoxDecoration(
-            color: Color.fromARGB(255, 255, 94, 0),
-          ),
-          child: const Center(
-            child: Text(
-              'BANNER PROMO',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-              ),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(imagePath),
+              fit: BoxFit.cover,
             ),
           ),
         ),
